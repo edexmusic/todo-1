@@ -1,0 +1,16 @@
+.about-component {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 36px;
+}
+
+.about-content {
+    font-size: 20px;
+}
+
+.bold-content {
+    font-weight: bold;
+}

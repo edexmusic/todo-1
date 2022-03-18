@@ -1,0 +1,10 @@
+.todo-component {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-group {
+    margin-bottom: 10px;
+}
