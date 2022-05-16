@@ -1,18 +1,25 @@
 import React from "react";
-import {Navigate} from "react-router-dom";
+import {Redirect} from "@reach/router";
 
 import "./login.css";
+import {state, maxId, createTodoItem} from "../../util";
 
-const Login = ({isLoggedIn, onLogin}) => {
 
+const Login = ({isLoggedIn}) => {
+
+    const onLogin = () => {
+        this.setState({
+            isLoggedIn: true
+        })
+    };
     const [value, setValue] = React.useState('');
 
     const handleChange = (event) => {
         setValue(event.target.value);
     };
 
-    if (isLoggedIn) {
-        return <Navigate to='/todo-app'/>
+    if (state.isLoggedIn) {
+        return <Redirect to='/todo-app'/>
     } else {
         return (
             <div className='container'>

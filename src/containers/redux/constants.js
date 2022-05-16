@@ -1,0 +1,2 @@
+export const GET_LATEST_DATA = "GET_LATEST_DATA";
+export const SET_LATEST_DATA = "SET_LATEST_DATA";

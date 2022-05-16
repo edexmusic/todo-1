@@ -1,7 +1,14 @@
 import "./header.css"
 import {Link} from "react-router-dom";
+import React from "react";
+import {useDispatch} from "react-redux";
+import {getLatestData} from "../../containers/redux/actions/actionCreator";
 
 const Header = () => {
+    const dispatch = useDispatch();
+    const dataHandler = () => {
+        dispatch(getLatestData())
+    };
     return (
         <div className='container'>
             <div className='header d-flex container'>
@@ -27,6 +34,7 @@ const Header = () => {
                             Login
                         </Link>
                     </li>
+                    <button className='hot-links-item' onClick={dataHandler}>Get Data</button>
                 </ul>
             </div>
         </div>
